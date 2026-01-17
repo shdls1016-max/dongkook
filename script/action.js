@@ -32,38 +32,57 @@ $('.hamburger').click(function(){
 })
 
 
-//섹션1
-/* $('.smallimg li').mouseenter(function(){
-    let h3Text = $(this).find('.textinfo').html();
-    let smallImg = $(this).find('img').attr('src')
-    $('.bigimg .textinfo').html(h3Text);
-    $('.bigimg .btn_play').hide();
-    $('.bigimg .bigimg1').attr('src',smallImg)
-    $('.bigimg .bigimg2 img').attr('src',smallImg)
-});
-
-$('.btn_top').click(function(){
-    $('html').animate({scrollTop:0},500)
-}) */
 
 
+$('.simg > li').mouseenter(function(){
+    rollingNumber = $(this).index();
 
-$(function () {
+    clearInterval(autoRolling);
 
-  // 처음 로딩 시 첫 번째 작은 이미지 기준으로 세팅
-  let firstImg = $('.simg li').eq(0).find('img').attr('src');
-  let firstSort = $('.simg li').eq(0).find('.sort').html();
-
-  $('.bimg figure img').attr('src', firstImg);
-  $('.bimg .sort').html(firstSort);
-
-  // 작은 이미지 클릭 이벤트
-  $('.simg li').on('click', function () {
-    let imgSrc = $(this).find('img').attr('src');
-    let sortHtml = $(this).find('.sort').html();
-    $('.bimg figure img').attr('src', imgSrc);
-    $('.bimg .sort').html(sortHtml);
-
-  });
+    $('.simg > li').removeClass('on');
+    $(this).addClass('on');
+    
+    autoRefactoring()
 
 });
+$('.simg > li').mouseleave(function(){
+    autoRolling = setInterval(imgRolling, 2000);
+})
+
+
+let rollingNumber = 0
+let smallImgLength = $('.simg > li').length
+$('.simg > li').eq(rollingNumber).addClass('on');
+
+let autoRolling = setInterval(imgRolling, 2000);
+
+function imgRolling(){
+    rollingNumber++
+    if(rollingNumber > smallImgLength - 1){
+        rollingNumber = 0
+    }
+    $('.simg > li').eq(rollingNumber).addClass('on').siblings().removeClass('on')
+
+    autoRefactoring()
+
+}
+
+
+function autoRefactoring(){
+    let textbox = $('.simg > li').eq(rollingNumber).find('.sort').html();
+    let simg = $('.simg > li').eq(rollingNumber).find('figure > img').attr('src')
+    $('.bimg .sort').html(textbox);
+    $('.bimg > figure > img').attr('src',simg);
+
+}
+
+
+/* hover되면 bimg에 뜨는 것만!
+$('.simg li').mouseenter(function(){
+    let textbox = $(this).find('.sort').html();
+    let simg = $(this).find('figure > img').attr('src');
+
+    $('.bimg > figure > img').attr('src',simg);
+    $('.bimg .sort').html(textbox);
+})
+ */

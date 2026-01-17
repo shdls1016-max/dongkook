@@ -77,25 +77,28 @@ section:first-child{margin-top: 130px;}
 .s1 .content .bimg {width: 50%;}
 .s1 .content .bimg figure {max-width: 794px; position: relative;}
 .s1 .content .bimg figure img{width: 100%; border: 1px solid #EBEBEB; border-radius: 10px; box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.05);}
-.s1 .content .bimg .sort {position: absolute; bottom: 3rem; right: 3rem; padding: 24px 25px; background:rgba(111, 162, 0, 0.9); border-radius: 10px; color: #ECFBCC; backdrop-filter:blur(4px); } 
+.s1 .content .bimg .sort {position: absolute; bottom: 3rem; right: 3rem; padding: 24px 25px; background:rgba(111, 162, 0, 0.9); border-radius: 10px; color: #ECFBCC; backdrop-filter:blur(4px); max-width: 427px; width: 50%;} 
 .s1 .content .bimg .sort .sortTop {display: flex; justify-content: space-between; margin-bottom: 20px; align-items: start;}
 .s1 .content .bimg .sort .sortTop h4 {font-size: 2rem; font-weight: 500; letter-spacing: -2px; line-height: 140%; color: #fff;}
 .s1 .content .bimg .sort .sortTop a {color: #ECFBCC; font-size: 1.4rem; line-height: 140%; letter-spacing: -2px; transition: .3s;}
 .s1 .content .bimg .sort .sortTop a:hover{font-size: 1.45rem; color: #f5ffe0; display: inline-block; /* border-bottom:1px solid #f5ffe0; */}
 /* hover 효과 언더라인이랑 폰트사이즈 중 어떤 걸로 할지 물어보기 */
 
-.s1 .content .bimg .sort .sortBottom {display: flex; gap: 84px; font-size: 18px; line-height: 140%; letter-spacing: -1px; font-weight: 300;}
+.s1 .content .bimg .sort .sortBottom {display: flex; /* gap: 8.4rem; */ justify-content: space-between; font-size: 1.8rem; line-height: 140%; letter-spacing: -1px; font-weight: 300;}
 .s1 .content .bimg .sort .sortBottom ul {}
 .s1 .content .bimg .sort .sortBottom ul li {margin-bottom: 7px;}
 .s1 .content .bimg .sort .sortBottom ul li:last-child {margin-bottom: 0;}
 
 
 .s1 .content .simg {width: 40%; display: flex; flex-wrap: wrap; gap: 18px;  flex-grow: 1;}
-.s1 .content .simg li {/* max-width: 384px; */ width: 40%; position: relative;  flex-grow: 1; height: fit-content;}
-.s1 .content .simg > li > figure{position: relative; }
-.s1 .content .simg > li > figure > img {width: 100%; border: 1px solid #EBEBEB; border-radius: 10px; box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.05); object-fit: cover; display: block; height: 45%;}
+.s1 .content .simg > li {/* max-width: 384px; */ width: 40%; position: relative;  flex-grow: 1; height: fit-content;}
+.s1 .content .simg > li > figure{position: relative; width: 100%; overflow: hidden; border: 1px solid #EBEBEB; border-radius: 10px;}
+.s1 .content .simg > li > figure > img {width: 100%; border-radius: 10px; box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.05); object-fit: cover; display: block; height: 45%; transition: .3s;}
 /* simg의 위 아래 공백을 줄이고 싶어서 height:45%를 여기도 주고 조부모인 li에다가도 줘봣는데 안됨 */
 /* bimg정보어떻게 하는지 수업내용보기 */ 
+
+
+
 .s1 .content .simg li figure a{display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 300; letter-spacing: -2px; position: absolute; bottom: 5%; left: 10%; width: 80%; gap:8px; padding: 9px 0; background: rgba(255, 253, 253, 0.6); border-radius: 10px; backdrop-filter: blur(4px); border: 1px solid rgba(244,244,244, 0.6);}
 .s1 .content .simg li figure a:hover{background: rgba(255, 253, 253, 0.8); color: #111;}
 
@@ -106,9 +109,12 @@ background:rgba(111, 162, 0, 0.9); border-radius: 10px; color: #ECFBCC; backdrop
 .s1 .content .simg li .sort .sortTop{display: flex; justify-content: space-between; margin: 24px 0 20px; align-items: start;}
 .s1 .content .simg li .sort .sortTop a{color: #ecfbcc;}
 .s1 .content .simg li .sort .sortBottom{display: flex;}
-
-
-.s1 .content .simg > li.on{border: 1px solid var(--mainColor1); transform: scale(1.1);}
+/* 
+.s1 .content .simg > li:hover > figure {border: 1px solid var(--mainColor1);} 
+.s1 .content .simg > li:hover > figure > img{transform: scale(1.1);} 
+*/
+.s1 .content .simg > li.on > figure {border: 1px solid var(--mainColor1);} 
+.s1 .content .simg > li.on > figure > img {transform: scale(1.1);}
 
 
 .s2 figure{width: 100%; position: relative;}
@@ -120,13 +126,13 @@ background:rgba(111, 162, 0, 0.9); border-radius: 10px; color: #ECFBCC; backdrop
 
 /* 화살표 촉이 축이랑 가운데가 아닌 것 같음 */
 .s2 figure .s2Tset a .arrow{width: 1.9rem; height: 1.9rem; margin-left: 2px; position: relative;}
-.s2Tset a .arrow span{width: 1.1rem; height: 1px; background: #fff; display: inline-block; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); transition: .3s;}
+.s2Tset a .arrow span{width: 1.1rem; height: 1px; background: #fff; display: inline-block; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); transition: .2s;}
 .s2Tset a .arrow span::before,
 .s2Tset a .arrow span::after{content: ''; width: 0.6rem; height: 80%; position: absolute; background: #fff; transform-origin: right; right: 0;}
 .s2Tset a .arrow span::before{transform: rotate(45deg);}
 .s2Tset a .arrow span::after{transform: rotate(-45deg);}
 
-.s2Tset a:hover .arrow span{width: 1.3rem; transition: .3s;} /* hover시 화살표길이 */
+.s2Tset a:hover .arrow span{width: 1.5rem; transition: .1s;} /* hover시 화살표길이 */
 
 .s2 figure .imgset{display: flex; gap: 1vw;}
 .s2 figure .imgset >  a{width: 19vw; height: auto; overflow: hidden; object-fit: cover; border: 1px solid #BCBEC0;}
@@ -154,9 +160,12 @@ footer .content .desc{color: #fff; line-height: 140%;}
 
 
 
-@media screen and (max-width:1180px)  {
+@media screen and (max-width:1220px)  {
     
     /* .s1 .content .bimg .sort .sortBottom ul:nth-child(2) {display: none;} */
+
+    .s2 figure > img{}
+
 }
 
 
