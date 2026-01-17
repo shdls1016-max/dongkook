@@ -161,19 +161,10 @@ footer .content .desc{color: #fff; line-height: 140%;}
 
 
 @media screen and (max-width:1220px)  {
-    
-    /* .s1 .content .bimg .sort .sortBottom ul:nth-child(2) {display: none;} */
+    .pc { display: none; }
+    .mo { display: block; }
 
-    .s2 figure > img{}
-
-}
-
-
-
-
-@media screen and (max-width:390px) {
-
-.hamburger{width: 40px; height: 40px; position:absolute; top: 15px; left: 20px; z-index: 7;}
+    .hamburger{width: 40px; height: 40px; position:absolute; top: 15px; left: 20px; z-index: 7;}
 .hamburger span{position: absolute; top: 50%; left: 50%; height: 2px; width: 22px; background: #111; transform: translate(-50%,-50%);}
 .hamburger span::before,
 .hamburger span::after
@@ -199,6 +190,46 @@ ul.gnb > li > ul.lnb{position: relative; padding-right: 30px;}  /* 연두바탕 
 
 .gnb > li > .lnb > li{border: 1px solid #000;}
 
+.hero{width: 100%; height: 50%;}
+.hero strong{font-size: 6rem; font-weight: bold; letter-spacing: normal;}
+.heroTset{top: auto; bottom: 10px; left: 18px; }
+.hero .heroText{display: none;}
+.hero .heroBtn{display: none;}
+.topset .langbox{display: none;}
+.topset .loginbox{display: none;}
+.topset > a{width: 96px; margin: 0 auto;}  /* 로고크기 가운데 안됨 */
+
+
+/* .heroTset{position: absolute; z-index: 10; top: 7.8vw; left: 7vw;  z-index: 1;} 
+.hero strong{font-size: 8rem; font-weight: bold; color: var(--mainColor1); letter-spacing:-5px; font-family: "Montserrat", sans-serif;}  
+*/
+
+
+
+
+/* .hero{height: calc(100vh - 200px); overflow: hidden; width: 100%; position: relative; box-sizing: border-box;}
+.hero video{object-fit: cover; width: 100%; height: 100%; */
+
+
+
+    .s1 .content .bimg .sort .sortBottom ul:nth-child(2) {display: none;}
+
+    .s2 figure.mo{max-height: 537px;}
+    .s2 figure.mo > .position{flex-direction: column; align-items: start;}
+    .s2 figure.mo > .position .s2Tset{align-items: start;}
+/*     .s2 figure.mo > .position > .s2Tset{flex-direction: row; justify-content: center; align-items: center; gap: 2rem;}   지금 배치랑 텍스트 가로배치 비교해서 나은걸로 하기*/
+
+
+}
+
+
+
+
+@media screen and (max-width:390px) {
+
+.pc { display: none; }
+.mo { display: block; }
+
 .hero{width: 100%; height: auto;}
 .hero strong{font-size: 3rem; font-weight: normal; letter-spacing: normal;}
 .heroTset{top: auto; bottom: 10px; left: 18px;}
@@ -210,10 +241,14 @@ ul.gnb > li > ul.lnb{position: relative; padding-right: 30px;}  /* 연두바탕 
 
 
 
-/* .hero{height: calc(100vh - 200px); overflow: hidden; width: 100%; position: relative; box-sizing: border-box;}
-.hero video{object-fit: cover; width: 100%; height: 100%; */
-
 
 .s1 .content .bimg{display: none;}
+
+    .s2 figure.mo{max-height: 537px;}
+    .s2 figure.mo .position{flex-direction: column; align-items: center; width: 80%;}
+    .s2 figure.mo .position .s2Tset{flex-direction: row;  align-items: center; width: 100%; justify-content:center;}
+    .s2 figure.mo .position .s2Tset > h3{font-size: 2rem; margin-bottom: 0; letter-spacing: -1px;}
+    .s2 figure.mo .position .s2Tset > a{display: none;}
+    .s2 figure.mo .position .imgset{width: 100%; justify-content: center;}
 
 }
