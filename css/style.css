@@ -29,7 +29,7 @@ section:first-child{margin-top: 130px;}
 
 .lnbbg{background: #fff; width: 100%; height: 300px; position: absolute; display: none; visibility: hidden;}    /* ----display:none---- */
 .gnb {display: flex; max-width: 1330px; justify-content: space-between; margin-left: auto; margin-right: auto; position: relative; } 
-.gnb > li {font-size: 20px;  position: relative;  padding: 15px 0; margin: 0 30px; white-space: nowrap;}
+.gnb > li {font-size: 20px;  position: relative;  padding: 15px 0; margin: 0 1.56vw; white-space: nowrap;}
 .gnb > li > a {padding: 15px;}
 .gnb > li > .lnb {position: absolute; top: 100%; left: 0; display: none; visibility: hidden; min-width: 100%; z-index: 5; }   /* ----display:none---- */
 .gnb > li > .lnb > li {font-size: 18px; }
@@ -155,59 +155,33 @@ background:rgba(111, 162, 0, 0.9); border-radius: 10px; color: #ECFBCC; backdrop
 .s3 ul li .textSet .date {font-size: 1.6rem; letter-spacing: -1px; /* display: inline-block; */}
 
 
-footer{height: 10vw; width: 100%; background: #102B4A; display: flex; align-items: center; justify-content: center;}
-footer .content{display: flex; gap:3.64rem; align-items: center; font-size: 1.4rem;}
+footer{height:clamp(19.7rem,10vw,17.9rem); width: 100%; background: #102B4A; display: flex; align-items: center; justify-content: center;}
+footer .content{display: flex; gap:3.64rem; align-items: center; font-size: 1.4rem; margin: 0 20px;}
 footer .content .desc{color: #fff; line-height: 140%;}
 
 
 
+
+
+
+
+
+/* ---------반응형-------------- */
+
 @media screen and (max-width:1220px)  {
     .pc { display: none; }
     .mo { display: block; }
-
-    .hamburger{width: 40px; height: 40px; position:absolute; top: 15px; left: 20px; z-index: 7;}
-.hamburger span{position: absolute; top: 50%; left: 50%; height: 2px; width: 22px; background: #111; transform: translate(-50%,-50%);}
-.hamburger span::before,
-.hamburger span::after
-{content: ''; width: 100%; height: 100%; background: #111; position: absolute; left: 0; transition: .3s;}
-.hamburger span::before{top: -6px;}
-.hamburger span::after{top: 6px;}
-
-.hamburger.on span::before{top: 0px; width: 50%; transform-origin: left; transform:rotate(-45deg);}
-.hamburger.on span::after{top: 0px; left: 0; width: 50%; transform-origin: left; transform:rotate(45deg);}
-
-nav{width: 100%; height: 100%; position:fixed; background: rgba(255,255,255,1); top: 0; left: -100%; z-index: 5;}
-nav.on{left: 0;}
-ul.gnb{display: flex; flex-direction: column; margin-top: 70px;}
-ul.gnb > li > a{padding:0;}
-ul.gnb > li > ul.lnb{position: relative; padding-right: 30px;}  /* 연두바탕 크기 줄이려고 넣었는데 안됨 */
-.gnb > li:hover::before{width:0; height: 0; }
-.gnb > li:hover::after{width: 0; height: 0; }
-.gnb > li:hover > a{color: var(--mainColor1);}
-.gnb > li > .lnb > li:first-child{margin-top: 10px;}
-.gnb > li > .lnb > li:hover{background: rgba(140,205, 0, 0.6);}
-.gnb > li > .lnb > li:hover > a{color: #fff;}
+.gnb > li {font-size: 20px;  position: relative;  padding: 15px 0; margin: 0 1.56vw; white-space: nowrap;}
+.gnb > li > a {padding: 15px; }
+.gnb > li > .lnb > li {font-size: 16px; }
 
 
-.gnb > li > .lnb > li{border: 1px solid #000;}
+.s1 .content .bimg .sort .sortBottom ul:nth-child(2) {display: none;}
 
-.hero{width: 100%; height: 50%;}
-.hero strong{font-size: 6rem; font-weight: bold; letter-spacing: normal;}
-.heroTset{top: auto; bottom: 10px; left: 18px; }
-.hero .heroText{display: none;}
-.hero .heroBtn{display: none;}
-.topset .langbox{display: none;}
-.topset .loginbox{display: none;}
-.topset > a{width: 96px; margin: 0 auto;}  /* 로고크기 가운데 안됨 */
-
-
-
-    .s1 .content .bimg .sort .sortBottom ul:nth-child(2) {display: none;}
-
-    .s2 figure.mo{height:clamp(18.4rem,35vw,50rem);}
-    .s2 figure.mo img{height: 100%;}
-    .s2 figure.mo > .position{flex-direction: column; align-items: start;}
-    .s2 figure.mo > .position .s2Tset{align-items: start;}
+.s2 figure.mo{height:clamp(18.4rem,35vw,50rem);}
+.s2 figure.mo img{height: 100%;}
+.s2 figure.mo > .position{flex-direction: column; align-items: start;}
+.s2 figure.mo > .position .s2Tset{align-items: start;}
 /*     .s2 figure.mo > .position > .s2Tset{flex-direction: row; justify-content: center; align-items: center; gap: 2rem;}   지금 배치랑 텍스트 가로배치 비교해서 나은걸로 하기*/
 
 
@@ -231,6 +205,50 @@ ul.gnb > li > ul.lnb{position: relative; padding-right: 30px;}  /* 연두바탕 
     .pc { display: none; }
     .mo { display: block; }
 
+
+body.no-scroll{overflow: hidden; height: 100vh;}
+
+.hamburger{width: 40px; height: 40px; position:absolute; top: 15px; left: 20px; z-index: 7;}
+.hamburger span{position: absolute; top: 50%; left: 50%; height: 2px; width: 22px; background: #111; transform: translate(-50%,-50%);}
+.hamburger span::before,
+.hamburger span::after
+{content: ''; width: 100%; height: 100%; background: #111; position: absolute; left: 0; transition: .3s;}
+.hamburger span::before{top: -6px;}
+.hamburger span::after{top: 6px;}
+
+.hamburger.on span::before{top: 0px; width: 50%; transform-origin: left; transform:rotate(-45deg);}
+.hamburger.on span::after{top: 0px; left: 0; width: 50%; transform-origin: left; transform:rotate(45deg);}
+
+nav{width: 100%; height: 100vh; position:fixed; background: rgba(255,255,255,1); top: 0; left: 0; transform: translateX(-100%); transition:transform .5s; z-index: 5;}
+nav.on{transform: translateX(0);}
+ul.gnb{display: flex; flex-direction: column; margin-top: 70px;}
+ul.gnb > li > a{padding:0;}
+ul.gnb > li > ul.lnb{position: relative; padding-right: 30px;}  /* 연두바탕 크기 줄이려고 넣었는데 안됨 */
+.gnb > li:hover::before{width:0; height: 0; }
+.gnb > li:hover::after{width: 0; height: 0; }
+.gnb > li:hover > a{color: var(--mainColor1);}
+.gnb > li > .lnb > li:first-child{margin-top: 10px;}
+.gnb > li > .lnb > li:hover{background: rgba(140,205, 0, 0.6);}
+.gnb > li > .lnb > li:hover > a{color: #fff;}
+
+
+.gnb > li > .lnb > li{}
+
+.hero{width: 100%; height: 50%;}
+.hero strong{font-size: 6rem; font-weight: bold; letter-spacing: normal;}
+.heroTset{top: auto; bottom: 10px; left: 18px; }
+.hero .heroText{display: none;}
+.hero .heroBtn{display: none;}
+.topset .langbox{display: none;}
+.topset .loginbox{display: none;}
+.topset > a{ margin: 0 auto;}
+
+
+
+
+
+
+
     .s1 .content .bimg{display: none;}
     .s2 figure.mo > .position {}
     .s2 figure.mo > .position .s2Tset { width: 100%;}
@@ -242,6 +260,34 @@ ul.gnb > li > ul.lnb{position: relative; padding-right: 30px;}  /* 연두바탕 
     .s3 ul li .textSet .date{text-indent: 3px; margin-top: 4px;}
 
 }
+
+
+@media screen and (max-width:700px)  {
+
+    .hero strong{font-size: 4rem; font-weight: bold; letter-spacing: normal;}
+
+    .s2 figure.mo{height: auto;}
+    .s2 figure.mo > img{height: auto;}
+    .s2 figure.mo > .position{width: 90%; }
+    .s2 figure.mo > .position .s2Tset h3{font-size: 2.3rem; letter-spacing: normal;}
+    .s2 figure.mo .imgset{border: 1px solid red; width: 100%;  }
+    .s2 figure.mo .position .imgset a{flex-grow: 1;}
+    .s2 figure.mo .position .imgset a img{ }
+
+    .s3 ul{display: flex; flex-direction: column; gap: 50px; flex-grow: 1; margin: 0 auto; align-items: center;}
+    .s3 ul li{width: 90%;}
+/*     .s3 ul li .textSet{flex-direction: row; justify-content: space-between; align-items: center; } */     /* 가로 배열이 나은지 세로배열이 나은지 모르겠음 */
+    .s3 ul > li > .textSet{margin-left: 10px;}
+    .s3 ul > li > .textSet > .date{margin-top: 0.8rem;}
+/*     .s3 ul > li > .textSet > .title{font-size: 1.7rem;}
+    .s3 ul > li > .textSet > .date{font-size: 1.5rem;}
+ */
+}
+
+
+
+
+
 
 
 

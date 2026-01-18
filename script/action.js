@@ -1,25 +1,46 @@
 
 //햄버거에서 gnb 클릭시 반응
 function gnbAction(){
-    let winW = $(window).width()   //window = 한화면, document = 전체화면
-    
-    $('.gnb li').off();   // 기존이벤트 제거
-    
-    if(winW < 391){
-        $('.gnb li').click(function(){
-            $('.lnb').slideUp();
-            $(this).children('.lnb').stop().slideToggle(200);
+    let winW = $(window).width();
+    let isNavOpen = $('header nav').hasClass('on');
+
+    // 초기화
+    $('.gnb > li > a').off('click');
+    $('.gnb > li').off('mouseenter');
+    $('.gnb > li').removeClass('on');
+    $('.gnb > li .lnb').hide();
+
+    // PC + nav 닫힘 상태에서만 hover 허용
+    if(winW > 1000 && !isNavOpen){
+
+        $('.gnb > li').on('mouseenter', function(){
+            $('.gnb > li .lnb').show();
+        });
+
+    }
+    // 모바일 or 햄버거 열린 상태
+    else {
+
+        $('.gnb > li > a').on('click', function(e){
+            e.preventDefault();
+
+            let $li = $(this).parent();
+
+            $li.siblings().removeClass('on')
+                .children('.lnb').slideUp(200);
+
+            $li.toggleClass('on');
+            $li.children('.lnb').slideToggle(200);
         });
     }
 }
 
-gnbAction()   //새로고침할때 실행
 
-$(window).resize(function(){    //창사이즈조절할때마다 실행
-    gnbAction()
-})
+gnbAction();
 
-
+$(window).on('resize', function(){
+    gnbAction();
+});
 
 
 
@@ -27,10 +48,23 @@ $(window).resize(function(){    //창사이즈조절할때마다 실행
 
 //햄버거 모양 변경
 $('.hamburger').click(function(){
-    $('.hamburger').toggleClass('on')
-    $('header nav').toggleClass('on')
-})
+    $(this).toggleClass('on');
+    $('header nav').toggleClass('on');
 
+    if ($('header nav').hasClass('on')){
+        $('body').addClass('no-scroll');
+    } else{
+        $('body').removeClass('no-scroll')
+    }
+
+    // lnb 초기화
+    if( !$('header nav').hasClass('on') ){
+        $('.gnb > li').removeClass('on').children('.lnb').hide();
+    }
+
+    //  상태 바뀌었으니 이벤트 재세팅
+    gnbAction();
+});
 
 
 
