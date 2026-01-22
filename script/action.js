@@ -68,6 +68,7 @@ $('.hamburger').click(function(){
 
 
 
+
 $('.simg > li').mouseenter(function(){
     rollingNumber = $(this).index();
 
@@ -120,3 +121,71 @@ $('.simg li').mouseenter(function(){
     $('.bimg .sort').html(textbox);
 })
  */
+
+
+/* 
+!!!!!!!너비 1000이하일때는 섹션1 돌아가는 거 없애려면 이걸로 바꾸면 됨!!!!!!!!!!
+let rollingNumber = 0;
+let smallImgLength = $('.simg > li').length;
+let autoRolling = null;
+
+function autoRefactoring(){
+    let textbox = $('.simg > li').eq(rollingNumber).find('.sort').html();
+    let simg = $('.simg > li').eq(rollingNumber).find('figure > img').attr('src');
+    $('.bimg .sort').html(textbox);
+    $('.bimg > figure > img').attr('src', simg);
+}
+
+function imgRolling(){
+    rollingNumber++;
+    if(rollingNumber >= smallImgLength){
+        rollingNumber = 0;
+    }
+    $('.simg > li').eq(rollingNumber)
+        .addClass('on')
+        .siblings().removeClass('on');
+
+    autoRefactoring();
+}
+
+function s1Action(){
+    let winW = $(window).width();
+
+    // 이벤트 초기화
+    $('.simg > li').off('mouseenter mouseleave');
+    clearInterval(autoRolling);
+
+    if(winW > 1000){
+        // PC
+        $('.simg > li').on('mouseenter', function(){
+            rollingNumber = $(this).index();
+            clearInterval(autoRolling);
+
+            $('.simg > li').removeClass('on');
+            $(this).addClass('on');
+
+            autoRefactoring();
+        });
+
+        $('.simg > li').on('mouseleave', function(){
+            autoRolling = setInterval(imgRolling, 2000);
+        });
+
+        autoRolling = setInterval(imgRolling, 2000);
+
+    } else {
+        // 모바일: autoRefactoring 사용 안 함
+        $('.simg > li').removeClass('on');
+        clearInterval(autoRolling);
+    }
+}
+
+// 최초 실행
+s1Action();
+
+// 리사이즈 대응
+$(window).on('resize', function(){
+    s1Action();
+});
+
+*/
