@@ -59,6 +59,7 @@ section:first-child{margin-top: 130px;}
 .hero video{object-fit: cover; width: 100%; height: 100%;} 
 .heroTset{position: absolute; z-index: 10; top: 7.8vw; left: 7vw;  z-index: 1;}
 .hero strong{font-size: 8rem; font-weight: bold; color: var(--mainColor1); letter-spacing:-5px; font-family: "Montserrat", sans-serif;}  
+.hero strong br {display: none;}
 .hero .heroText{font-size: 30px; letter-spacing: 2px; line-height: 140%; color: #fff; margin: 2.6rem 0 6rem;}
 .hero .heroBtn{color: #fff; font-size: 20px; width: 170px; height: 57px; border: 1px solid rgba(255, 255, 255, 0.9); background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(4px); border-radius: 50px; display: flex; justify-content:space-between; padding-left: 24px; align-items: center; }
 .hero .heroBtn a{display: inline-block; width: 48px; height: 48px; background: #8CCD00; border-radius: 50%; margin-right: 7px; display: flex; justify-content: center; align-items: center;}
@@ -244,20 +245,31 @@ ul.gnb > li > ul.lnb{position: relative; padding-right: 30px;}  /* 연두바탕 
 .topset > a{ margin: 0 auto;}
 
 
+/* .s1 .content .bimg{display: none;}     >   섹션1 빅이미지 안 없애는 거 시도중 */
+.s1 .content{flex-direction: column;}
+.s1 .content .bimg{width: 100%;}
+.s1 .content .bimg figure{margin-left: auto; margin-right: auto; }
+.s1 .content .simg{width: 100%;}
+
+
+.s1 .content .bimg .sort .sortTop h4 {font-size: 1.8rem;}
+.s1 .content .bimg .sort .sortTop a {font-size: 1.4rem;}
+.s1 .content .bimg .sort .sortBottom {font-size: 1.6rem;}
+
+.s1 .content .bimg .sort {padding: 1.6vw 25px; } 
+.s1 .content .bimg .sort .sortTop {margin-bottom: 1vw; }
 
 
 
 
+.s2 figure.mo > .position {}
+.s2 figure.mo > .position .s2Tset { width: 100%;}
+.s2 figure.mo > .position .s2Tset h3{margin-bottom: 0; font-size: 3.5rem; width: 100%; text-align: center;}
+.s2 figure.mo > .position .s2Tset a{display: none;}
 
-    .s1 .content .bimg{display: none;}
-    .s2 figure.mo > .position {}
-    .s2 figure.mo > .position .s2Tset { width: 100%;}
-    .s2 figure.mo > .position .s2Tset h3{margin-bottom: 0; font-size: 3.5rem; width: 100%; text-align: center;}
-    .s2 figure.mo > .position .s2Tset a{display: none;}
-
-    .s3 ul li .textSet{display: flex; flex-direction: column;}
-    .s3 ul li .textSet .desc{display: none}
-    .s3 ul li .textSet .date{text-indent: 3px; margin-top: 4px;}
+.s3 ul li .textSet{display: flex; flex-direction: column;}
+.s3 ul li .textSet .desc{display: none}
+.s3 ul li .textSet .date{text-indent: 3px; margin-top: 4px;}
 
 }
 
@@ -265,23 +277,23 @@ ul.gnb > li > ul.lnb{position: relative; padding-right: 30px;}  /* 연두바탕 
 @media screen and (max-width:700px)  {
 
     .hero strong{font-size: 4rem; font-weight: bold; letter-spacing: normal;}
+    .hero strong br {display: block;}
+    .topset > a{width: 96px; margin: 0 auto;}
 
     .s2 figure.mo{height: auto;}
     .s2 figure.mo > img{height: auto;}
     .s2 figure.mo > .position{width: 90%; }
     .s2 figure.mo > .position .s2Tset h3{font-size: 2.3rem; letter-spacing: normal;}
-    .s2 figure.mo .imgset{border: 1px solid red; width: 100%;  }
+    .s2 figure.mo .imgset{width: 100%;  }
     .s2 figure.mo .position .imgset a{flex-grow: 1;}
     .s2 figure.mo .position .imgset a img{ }
 
-    .s3 ul{display: flex; flex-direction: column; gap: 50px; flex-grow: 1; margin: 0 auto; align-items: center;}
-    .s3 ul li{width: 90%;}
-/*     .s3 ul li .textSet{flex-direction: row; justify-content: space-between; align-items: center; } */     /* 가로 배열이 나은지 세로배열이 나은지 모르겠음 */
-    .s3 ul > li > .textSet{margin-left: 10px;}
-    .s3 ul > li > .textSet > .date{margin-top: 0.8rem;}
-/*     .s3 ul > li > .textSet > .title{font-size: 1.7rem;}
+    .s3 ul > li > .textSet{margin-left: 0px;}
+    .s3 ul > li > .textSet > .date{margin-top: 0.6rem;}
+    .s3 ul > li > .textSet > .title{font-size: 1.7rem; white-space: nowrap;}
     .s3 ul > li > .textSet > .date{font-size: 1.5rem;}
- */
+   
+
 }
 
 
@@ -292,6 +304,8 @@ ul.gnb > li > ul.lnb{position: relative; padding-right: 30px;}  /* 연두바탕 
 
 
 @media screen and (max-width:390px) {
+
+    /* section{margin-bottom: 160px;}       !!!반응형 어디부터 어느사이즈로 줄일지 결정하기!!!! */
 
 .pc { display: none; }
 .mo { display: block; }
@@ -304,17 +318,29 @@ ul.gnb > li > ul.lnb{position: relative; padding-right: 30px;}  /* 연두바탕 
 .topset .langbox{display: none;}
 .topset .loginbox{display: none;}
 .topset > a{width: 96px; margin: 0 auto;}  /* 로고크기 가운데 안됨 */
+
+
+
+.s1 .content .simg li figure a{display: none;}
+/* .s1 .content .bimg figure {position: relative;} */
+.s1 .content .bimg figure .sort{width: 80%; bottom: auto; top: 50%; left: 50%; transform: translate(-50%,-50%); bottom: auto; right: auto; background:rgba(111, 162, 0, 0.8);}
+/* .s1 .content .bimg .sort {position: absolute; bottom: 3rem; right: 3rem; padding: 24px 25px; background:rgba(111, 162, 0, 0.9); border-radius: 10px; color: #ECFBCC; backdrop-filter:blur(4px); max-width: 427px; width: 50%;}  */
+
+.s2 figure.mo{max-height: 537px;}
+.s2 figure.mo .position{flex-direction: column; align-items: center; width: 80%;}
+.s2 figure.mo .position .s2Tset{flex-direction: row;  align-items: center; width: 100%; justify-content:center;}
 .s2 figure.mo .position .s2Tset > h3{font-size: 2rem; margin-bottom: 0; letter-spacing: -1px;}
+.s2 figure.mo .position .s2Tset > a{display: none;}
+.s2 figure.mo .position .imgset{width: 100%; justify-content: center;}
 
+.part3 {display: flex; flex-wrap: wrap; }
+.s3 ul {display: grid; grid-template-columns: 1fr 1fr;}
+.s3 ul li {width: auto;}
+/* .s3 ul li {width: calc((100% - 40px - 2.5vw) / 2);}
+.s3 ul li:nth-child(odd):last-child {
+    flex-grow: 0;
+    width: calc((100% - 20px - 2.5vw) / 2);
+  } */
 
-
-.s1 .content .bimg{display: none;}
-
-    .s2 figure.mo{max-height: 537px;}
-    .s2 figure.mo .position{flex-direction: column; align-items: center; width: 80%;}
-    .s2 figure.mo .position .s2Tset{flex-direction: row;  align-items: center; width: 100%; justify-content:center;}
-    .s2 figure.mo .position .s2Tset > h3{font-size: 2rem; margin-bottom: 0; letter-spacing: -1px;}
-    .s2 figure.mo .position .s2Tset > a{display: none;}
-    .s2 figure.mo .position .imgset{width: 100%; justify-content: center;}
 
 }
