@@ -223,7 +223,7 @@ body.no-scroll{overflow: hidden; height: 100vh;}
 nav{width: 100%; height: 100vh; position:fixed; background: rgba(255,255,255,1); top: 0; left: 0; transform: translateX(-100%); transition:transform .5s; z-index: 5;}
 nav.on{transform: translateX(0);}
 ul.gnb{display: flex; flex-direction: column; margin-top: 70px;}
-ul.gnb > li > a{padding:0;}
+ul.gnb > li > a{padding:0; margin-left: 40px;}
 ul.gnb > li > ul.lnb{position: relative; padding-right: 30px;}  /* 연두바탕 크기 줄이려고 넣었는데 안됨 */
 .gnb > li:hover::before{width:0; height: 0; }
 .gnb > li:hover::after{width: 0; height: 0; }
@@ -249,7 +249,7 @@ ul.gnb > li > ul.lnb{position: relative; padding-right: 30px;}  /* 연두바탕 
 .s1 .content{flex-direction: column;}
 .s1 .content .bimg{width: 100%;}
 .s1 .content .bimg figure{margin-left: auto; margin-right: auto; }
-.s1 .content .simg{width: 100%;}
+.s1 .content .simg{width: 100%;}   
 
 
 .s1 .content .bimg .sort .sortTop h4 {font-size: 1.8rem;}
@@ -258,6 +258,15 @@ ul.gnb > li > ul.lnb{position: relative; padding-right: 30px;}  /* 연두바탕 
 
 .s1 .content .bimg .sort {padding: 1.6vw 25px; } 
 .s1 .content .bimg .sort .sortTop {margin-bottom: 1vw; }
+.s1 .content .simg > li{width: 10%;}   /* 반응형 700px에  sorttop수정이랑 세트! (292행)*/
+
+/* 
+.s1 .content .simg > li {max-width: 384px; width: 40%; position: relative;  flex-grow: 1; height: fit-content;}
+.s1 .content .simg > li > figure{position: relative; width: 100%; overflow: hidden; border: 1px solid #EBEBEB; border-radius: 10px;}
+.s1 .content .simg > li > figure > img {width: 100%; border-radius: 10px; box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.05); object-fit: cover; display: block; height: 45%; transition: .3s;}
+
+ */
+
 
 
 
@@ -279,6 +288,10 @@ ul.gnb > li > ul.lnb{position: relative; padding-right: 30px;}  /* 연두바탕 
     .hero strong{font-size: 4rem; font-weight: bold; letter-spacing: normal;}
     .hero strong br {display: block;}
     .topset > a{width: 96px; margin: 0 auto;}
+
+    .s1 .content .simg li figure > a{display: none;}   /* 반응형 1000px에 261행과 세트!*/
+
+
 
     .s2 figure.mo{height: auto;}
     .s2 figure.mo > img{height: auto;}
@@ -349,3 +362,15 @@ section:first-child{margin-top: 90px;}
 
 footer .content h3{display: none;}
 }
+
+
+
+/* ------------SUB2-1--------------- */
+
+.sectionBox {}
+.sectionBox .location {}
+.sectionBox .location figure{width: 1.6rem; height: 1.6rem; display: inline-block;}
+.sectionBox .location figure img{object-fit: cover; width: 100%; height: auto;}
+.sectionBox .location a{}
+.sectionBox .location a.icon {width: 1.6rem; height: 1.6rem; display: inline-block;}
+.sectionBox .location > a > img{object-fit: cover; width: 100%; height: auto;}
