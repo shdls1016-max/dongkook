@@ -26,6 +26,7 @@ section:first-child{margin-top: 130px;}
 .topset a img{width: 100%; }
 .topset .loginbox {font-size: 1.6rem; display: flex; gap: 10px; align-items: center; }
 .topset .loginbox span{background: #111; width: 1px; height: 15px;}
+nav .loginbox.mo{display: none;} 
 
 .lnbbg{background: #fff; width: 100%; height: 300px; position: absolute; display: none; visibility: hidden;}    /* ----display:none---- */
 .gnb {display: flex; max-width: 1330px; justify-content: space-between; margin-left: auto; margin-right: auto; position: relative; } 
@@ -189,6 +190,7 @@ footer .content .desc{color: #fff; line-height: 140%;}
 
 /* ---------sub2-1-------- */
 .sub_content > form > .searchBox input::placeholder{color: transparent;}
+.sub_content > form > .searchBox.login input::placeholder{color: rgba(17, 17, 17, 0.4);}
 
 
 
@@ -229,7 +231,7 @@ ul.gnb > li > ul.lnb{position: relative; padding-right: 30px;}  /* 연두바탕 
 .gnb > li > .lnb > li:hover > a{color: #fff;}
 
 
-.gnb > li > .lnb > li{}
+.gnb > li > .lnb > li{margin-left: 40px; margin-right: 40px;}
 
 .hero{width: 100%; height: 50%;}
 .hero strong{font-size: 6rem; font-weight: bold; letter-spacing: normal;}
@@ -237,8 +239,13 @@ ul.gnb > li > ul.lnb{position: relative; padding-right: 30px;}  /* 연두바탕 
 .hero .heroText{display: none;}
 .hero .heroBtn{display: none;}
 .topset .langbox{display: none;}
-.topset .loginbox{display: none;}
+.topset .loginbox.pc{display: none;} 
 .topset > a{ margin: 0 auto;}
+nav .loginbox.mo{display: flex; gap: 10px; align-items: center; position: absolute; font-size: 1.6rem; top: 20px; right: 20px;
+opacity: 0; transition: opacity .2s; } 
+nav .loginbox.mo > span{width: 1px; height: 1.5rem; background: #111;}
+
+nav.on .loginbox.mo{opacity: 1; transition: opacity .2s; transition-delay: .2s;}
 
 
 
@@ -436,3 +443,30 @@ ul.pagenation > li > a.num.present{color: #102b4a; font-weight: normal;}
 ul.pagenation > li > a.num.on{color: #102b4a; font-weight: normal;}
 ul.pagenation > li > a > img{width: 31px; height: auto;}
 ul.pagenation > li > a > img.invert{transform: rotate(180deg);}
+
+
+
+
+
+
+
+
+/* -----------login---------- */
+/* 403행부터 참고, 상속받음 */
+/* form .searchBox{display: inline-block; position: relative;} */
+form.login{margin-bottom: 0;}
+form .searchBox.login{display: flex; flex-direction: column;}
+form .searchBox button.eye{background: transparent; border: 0; width: 22px; height: auto; position: absolute; bottom: 18px; right: 20px; cursor: pointer;}
+
+form .searchBox input{font-size: 16px; letter-spacing: -2px;}
+.searchBox input.id{width: 53.6rem;}
+.searchBox input.password{width: 53.6rem;}
+.searchBox input:focus{outline: 0px;}
+.loginOption {display: flex; margin: 0.88vw 0 6.56vw; font-size: 1.6rem; letter-spacing: -2px; justify-content: space-between;}
+    .ckset{display: flex; gap: 8px; align-items: center;}
+.loginOption > input{border: 1px solid red; background: red;}
+.loginOption .findInfo{display: flex; gap: 0.52vw; align-items: center;}
+.loginOption .findInfo > span{background: #aeaeae; width: 1px; height: 1.6rem;}
+
+.btn_login{width: 53.6rem; padding: 1.9rem 0; background: #102b4a; color: #fff; border-radius: 4px; font-size: 1.6rem; margin-bottom: 1.98vw; cursor: pointer;}
+.btn_signin{width: 53.6rem; padding: 1.9rem 0; border:1px soild #102b4a; color:#102b4a; background: #fff; border-radius: 4px; box-sizing: border-box; font-size: 1.6rem; margin-bottom: clamp(10.6rem,8.5vw,16rem); cursor: pointer;}

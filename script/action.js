@@ -200,3 +200,20 @@ $('.pagenation > li > a.num').mouseenter(function(){
 $('.pagenation > li > a.num').mouseleave(function(){
     $(this).removeClass('on')
 })
+
+
+
+/* login */
+$('.searchBox.login > button').click(function(){
+    let target = $(this).siblings('input.password');
+
+    if(target.attr('type') === 'password'){
+        target.attr('type','text');
+        $(this).find('img.iconEye').attr('src','images/sub/eye.png')
+    }
+
+    else{
+        target.attr('type','password');
+        $(this).find('img').attr('src','images/sub/eye-off.png')
+    }
+})
