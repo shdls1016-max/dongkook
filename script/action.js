@@ -189,3 +189,14 @@ $(window).on('resize', function(){
 });
 
 */
+
+
+
+
+/* sub2-1 */
+$('.pagenation > li > a.num').mouseenter(function(){
+    $(this).addClass('on')
+})
+$('.pagenation > li > a.num').mouseleave(function(){
+    $(this).removeClass('on')
+})

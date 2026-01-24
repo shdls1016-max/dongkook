@@ -76,7 +76,7 @@ section:first-child{margin-top: 130px;}
 .s1 h3 {font-size: 3rem; text-align: center; margin-bottom: 1.6em;}  /* 50px이어서 대략 1.6em */
 .s1 .content {display: flex; justify-content: space-between; gap: 22px;}
 .s1 .content .bimg {width: 50%;}
-.s1 .content .bimg figure {max-width: 794px; position: relative;}
+.s1 .content .bimg figure {/* max-width: 794px; */ position: relative;}
 .s1 .content .bimg figure img{width: 100%; border: 1px solid #EBEBEB; border-radius: 10px; box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.05);}
 .s1 .content .bimg .sort {position: absolute; bottom: 3rem; right: 3rem; padding: 24px 25px; background:rgba(111, 162, 0, 0.9); border-radius: 10px; color: #ECFBCC; backdrop-filter:blur(4px); max-width: 427px; width: 50%;} 
 .s1 .content .bimg .sort .sortTop {display: flex; justify-content: space-between; margin-bottom: 20px; align-items: start;}
@@ -91,7 +91,7 @@ section:first-child{margin-top: 130px;}
 .s1 .content .bimg .sort .sortBottom ul li:last-child {margin-bottom: 0;}
 
 
-.s1 .content .simg {width: 40%; display: flex; flex-wrap: wrap; gap: 18px;  flex-grow: 1;}
+.s1 .content .simg {width: 40%; display: flex; flex-wrap: wrap; gap:0.93vw;  flex-grow: 1;}
 .s1 .content .simg > li {/* max-width: 384px; */ width: 40%; position: relative;  flex-grow: 1; height: fit-content;}
 .s1 .content .simg > li > figure{position: relative; width: 100%; overflow: hidden; border: 1px solid #EBEBEB; border-radius: 10px;}
 .s1 .content .simg > li > figure > img {width: 100%; border-radius: 10px; box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.05); object-fit: cover; display: block; height: 45%; transition: .3s;}
@@ -245,11 +245,14 @@ ul.gnb > li > ul.lnb{position: relative; padding-right: 30px;}  /* 연두바탕 
 .topset > a{ margin: 0 auto;}
 
 
-/* .s1 .content .bimg{display: none;}     >   섹션1 빅이미지 안 없애는 거 시도중 */
+
 .s1 .content{flex-direction: column;}
-.s1 .content .bimg{width: 100%;}
-.s1 .content .bimg figure{margin-left: auto; margin-right: auto; }
+.s1 .content .bimg{width: 100%;} 
+.s1 .content .bimg figure{margin-left: auto; margin-right: auto; width: 100%;}
+.s1 .content .bimg figure img{display: inline-block; width: 100%;}
 .s1 .content .simg{width: 100%;}   
+
+
 
 
 .s1 .content .bimg .sort .sortTop h4 {font-size: 1.8rem;}
@@ -306,7 +309,7 @@ ul.gnb > li > ul.lnb{position: relative; padding-right: 30px;}  /* 연두바탕 
     .s3 ul > li > .textSet > .title{font-size: 1.7rem; white-space: nowrap;}
     .s3 ul > li > .textSet > .date{font-size: 1.5rem;}
    
-
+    footer .content h3{display: none;}
 }
 
 
@@ -367,10 +370,52 @@ footer .content h3{display: none;}
 
 /* ------------SUB2-1--------------- */
 
+.w1600{width: 1600px; margin-left: auto; margin-right: auto;}
+
+
 .sectionBox {}
-.sectionBox .location {}
-.sectionBox .location figure{width: 1.6rem; height: 1.6rem; display: inline-block;}
-.sectionBox .location figure img{object-fit: cover; width: 100%; height: auto;}
-.sectionBox .location a{}
-.sectionBox .location a.icon {width: 1.6rem; height: 1.6rem; display: inline-block;}
-.sectionBox .location > a > img{object-fit: cover; width: 100%; height: auto;}
+.sectionBox .repeatTop .location {margin: 40px 0 13px; font-size: 14px;}
+.sectionBox .repeatTop .location figure{width: 1.6rem; height: 1.6rem; display: inline-block;}
+.sectionBox .repeatTop .location figure img{object-fit: cover; width: 100%; height: auto;}
+.sectionBox .repeatTop .location a{}
+.sectionBox .repeatTop .location a.icon {width: 1.6rem; height: 1.6rem; display: inline-block;}
+.sectionBox .repeatTop .location > a > img{object-fit: cover; width: 100%; height: auto;}
+
+.repeatTop .pageName{font-size: 30px; font-weight: 500; color: #fff; text-align: center; background: linear-gradient(90deg, var(--mainColor1), var(--mainColor2)); padding: 22px 0; width: 100%;}
+
+form{margin: 65px 90px; text-align: center;}
+form .searchBox{display: inline-block; position: relative;}
+form .searchBox input{width: 43.75vw; padding: 29px 0 17px 10px; font-size: 25px; letter-spacing: -1px; border: 0; border-bottom: 1px solid #102b4a; color: rgba(17, 17, 17, 0.4);}
+form .searchBox button{background: transparent; border: 0; width: 43px; height: auto; position: absolute; bottom: 17px; right: 17px;}
+form .searchBox button img{width: 100%; height: auto; object-fit: cover;}
+
+ul.productType{display: flex; gap: 15px; border: 1px solid red; font-size:2.2rem; letter-spacing: -1px; }
+ul.productType li{ border-radius:30px; border: 1px solid #4e6886; box-sizing: border-box; }
+ul.productType li.on{background:rgba(16, 43, 74, 1)}
+ul.productType li.on a{color: #fff;}
+ul.productType li a{display:inline-block; border-radius:30px; padding: 10px 15px;}
+
+ul.productType li:hover{background:rgba(16, 43, 74, 0.8)}
+ul.productType li:hover a{color: #fff;}
+
+
+ul.productImg{display: flex; gap:1vw; flex-grow: 1; flex-wrap: wrap; margin-left: auto; margin-right: auto; text-align: center; margin: 45px 0;}
+ul.productImg li{width: 30%; height: auto;  position: relative;}
+ul.productImg > li > a{width: 100%; height:100%; }
+ul.productImg > li > a > img{width: 100%; height:100%; object-fit: cover; border: 1px solid #D9D8D8; }
+ul.productImg li .productText{display: flex; flex-direction: column; position: absolute; top: 0; left: 0; padding: 29px 0 16px; background: rgba(255, 255, 255, 0.7); border-radius: 5px; width: calc(100% - 1.35vw); top: 80%; left: 50%; transform: translate(-50%, -50%); display: none; transition: .3s;}   /* transition  적용안됨 */
+ul.productImg li .productText span:first-child{font-size: 2.5rem; letter-spacing: -1px; font-weight: 600; margin-bottom: 5px;}
+ul.productImg li .productText:last-child{font-size: 20px; font-weight: lighter; color: #4d4d4f;}
+
+ul.productImg li:hover .dimmed {width: 100%; height: 100%; background: rgba(0, 0, 0, 0.1); position: absolute; top: 0; left: 0;}
+ul.productImg li:hover .productText{display: flex; }  /* transition: 2s; 적용안됨 */
+
+
+ul.pagenation{display: flex; align-items: center; margin-bottom: clamp(10.6rem,8.5vw,16rem);}
+ul.pagenation > li{}
+ul.pagenation > li > a{}
+ul.pagenation > li > a.num{font-size: 2.2rem; color: #4d4d4f; padding: 6px 0px; font-weight: lighter; overflow: hidden; width: 42px; display: block; text-align: center; }
+ul.pagenation > li > a.num.present{color: #102b4a; font-weight: normal;}
+ul.pagenation > li > a.num.on{color: #102b4a; font-weight: normal;}
+ul.pagenation > li > a > img{width: 31px; height: auto;}
+ul.pagenation > li > a > img.invert{transform: rotate(180deg);}
