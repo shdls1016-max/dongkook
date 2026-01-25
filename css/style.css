@@ -17,6 +17,9 @@ section{margin-bottom: 160px;}
 section:first-child{margin-top: 130px;}
 .minMargin{padding-right: 20px; padding-left: 20px; box-sizing: border-box;}
 
+.swiper.mo{display: none;}
+
+
 /* -----header---- */
 .topset {display: flex; justify-content: space-between; align-items: start; margin: 25px 20px 30px;}
 .topset .langbox {font-size: 1.6rem; display: flex; gap: 10px; align-items: center; cursor: pointer;}
@@ -330,7 +333,54 @@ ul.productImg li:hover .productText{ top: 75%; left: 50%; transform: translate(-
     .productImg li.remove700{display: none;}
     ul.pagenation > li > a.num.remove700{display: none;}
 
+
+
+    /* swiper test */
+    .swiper.mo {display: block;}
+    .sub_content ul.productType.pc{display: none;}
+
+    .sub_content .swiper.mo {
+      width: 80%;
+      height: 100%;
+    }
+
+    .sub_content > .swiper.mySwiper.mo .swiper-wrapper .swiper-slide {
+      text-align: center;
+      font-size:1.5rem; letter-spacing: -1px;
+      width: auto;
+      border: 1px solid #4e6886;
+      background: #fff;
+      border-radius: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0; 
+    }
+     .swiper-slide a{
+      padding: 10px 15px;
+      display: inline-block;
+      border-radius: 30px;
+    }
     
+     .sub_content > .swiper.mySwiper.mo .swiper-wrapper .swiper-slide.on {
+      background:rgba(16, 43, 74, 1);
+      border-radius: 30px;
+    }
+     .sub_content > .swiper.mySwiper.mo .swiper-wrapper .swiper-slide.on a{
+      color: #fff;
+      padding: 10px 15px;
+      display: inline-block;
+      border-radius: 30px;
+    }
+
+
+
+    /* 로그인페이지 */
+    .sub_content{}
+    form.login{width: 80%; }
+    form.login .searchBox input{/* width: 27.91vw; */ width: 100%;}
+    button.btn_login{width: 80%;}
+    button.btn_signin{width: 80%;}
 
 
 }
@@ -380,13 +430,21 @@ section:first-child{margin-top: 90px;}
 .s3 h3{font-size: 2rem;}
 .s3 ul {display: grid; grid-template-columns: 1fr 1fr;}
 .s3 ul li {width: auto;}
-/* .s3 ul li {width: calc((100% - 40px - 2.5vw) / 2);}
-.s3 ul li:nth-child(odd):last-child {
-    flex-grow: 0;
-    width: calc((100% - 20px - 2.5vw) / 2);
-  } */
 
+   
 footer .content h3{display: none;}
+
+
+/* -----sub2-1---------- */
+ul.productImg li .productText span:first-child{font-size: 1.6rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+ul.productImg li  .productText:last-child{font-size: 12px;}
+ul.productImg li .productText{top: 65%; left: 50%;  }  
+ul.productImg li:hover .productText{ top: 55%; left: 50%; transform: translate(-50%, -50%);} 
+ 
+/* ----------login--------- */
+form.login .loginOption{font-size: 15px; flex-direction: column; gap: 30px; flex-wrap: wrap; margin-bottom: 7vw;}
+form.login .loginOption .findInfo{justify-content: center;}
+
 }
 
 
@@ -413,14 +471,16 @@ form .searchBox input{width: 43.75vw; padding: 29px 0 17px 10px; font-size: 25px
 form .searchBox button{background: transparent; border: 0; width: 43px; height: auto; position: absolute; bottom: 17px; right: 17px;}
 form .searchBox button img{width: 100%; height: auto; object-fit: cover;}
 
-ul.productType{display: flex; gap: 15px; font-size:2.2rem; letter-spacing: -1px;}
-ul.productType li{ border-radius:30px; border: 1px solid #4e6886; box-sizing: border-box; }
-ul.productType li.on{background:rgba(16, 43, 74, 1)}
-ul.productType li.on a{color: #fff;}
-ul.productType li a{display:inline-block; border-radius:30px; padding: 10px 15px;}
+ul.productType.pc{display: flex; gap: 15px; font-size:2.2rem; letter-spacing: -1px;}
+ul.productType.pc li{ border-radius:30px; border: 1px solid #4e6886; box-sizing: border-box; }
+ul.productType.pc li.on{background:rgba(16, 43, 74, 1)}
+ul.productType.pc li.on a{color: #fff;}
+ul.productType.pc li a{display:inline-block; border-radius:30px; padding: 10px 15px;}
 
-ul.productType li:hover{background:rgba(16, 43, 74, 0.8)}
-ul.productType li:hover a{color: #fff;}
+ul.productType.pc li:hover{background:rgba(16, 43, 74, 0.8)}
+ul.productType.pc li:hover a{color: #fff;} 
+/* swiper 안보이는 거는 맨 위쪽으로 올림! productType안보이면 보이게 하려고 700px때 보이게 하는 속성작성함 */
+
 
 
 .productImg{display: flex; gap:1vw; flex-grow: 1; flex-wrap: wrap; margin-left: auto; margin-right: auto; text-align: center; margin: 45px 0; justify-content: center;}
@@ -449,8 +509,6 @@ ul.pagenation > li > a > img.invert{transform: rotate(180deg);}
 
 
 
-
-
 /* -----------login---------- */
 /* 403행부터 참고, 상속받음 */
 /* form .searchBox{display: inline-block; position: relative;} */
@@ -465,7 +523,7 @@ form .searchBox input{font-size: 16px; letter-spacing: -2px;}
 .loginOption {display: flex; margin: 0.88vw 0 6.56vw; font-size: 1.6rem; letter-spacing: -2px; justify-content: space-between;}
     .ckset{display: flex; gap: 8px; align-items: center;}
 .loginOption > input{border: 1px solid red; background: red;}
-.loginOption .findInfo{display: flex; gap: 0.52vw; align-items: center;}
+.loginOption .findInfo{display: flex; gap: 1rem; align-items: center;}
 .loginOption .findInfo > span{background: #aeaeae; width: 1px; height: 1.6rem;}
 
 .btn_login{width: 53.6rem; padding: 1.9rem 0; background: #102b4a; color: #fff; border-radius: 4px; font-size: 1.6rem; margin-bottom: 1.98vw; cursor: pointer;}

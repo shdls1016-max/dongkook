@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DongKook</title>
     <link rel="stylesheet" href="css/style.css">
+
+      <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 </head>
 <body>
      <header class="container">
@@ -114,14 +117,31 @@
                     <button><img src="images/sub/Search.png" alt="검색버튼"></button>
                 </div>
             </form>
-    
-            <ul class="productType minMargin">
+
+
+            <!-- swiper test -->
+
+            <div class="swiper mySwiper mo">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide on"><a href="sub2-1.html">일반의약품</a></div>
+                    <div class="swiper-slide"><a href="#">전문의약품</a></div>
+                    <div class="swiper-slide"><a href="#">의약외품</a></div>
+                    <div class="swiper-slide"><a href="#">의료기기</a></div>
+                    <div class="swiper-slide"><a href="#">수출전용</a></div>
+                </div>
+                
+            </div>
+
+           
+
+
+            <ul class="productType minMargin pc">
                 <li class="on"><a href="sub2-1.html">일반의약품</a></li>
                 <li><a href="#">전문의약품</a></li>
                 <li><a href="#">의약외품</a></li>
                 <li><a href="#">의료기기</a></li>
                 <li><a href="#">수출전용</a></li>
-            </ul>
+            </ul> 
     
             <ul class="productImg">
                 <li>
@@ -230,5 +250,24 @@
     <script src="script/jquery-3.7.1.min.js"></script>
     <script src="script/action.js"></script>
 
+
+
+      <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView:/*  4 */'auto',
+      centeredSlides: false,
+      spaceBetween: 15,
+      grabCursor: true,
+      /* pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      }, */
+    });
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"ec9a6c21600d4161aa74e6a2c77efad2","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
