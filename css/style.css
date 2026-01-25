@@ -64,7 +64,7 @@ nav .loginbox.mo{display: none;}
 .heroTset{position: absolute; z-index: 10; top: 7.8vw; left: 7vw;  z-index: 1;}
 .hero strong{font-size: 8rem; font-weight: bold; color: var(--mainColor1); letter-spacing:-5px; font-family: "Montserrat", sans-serif;}  
 .hero strong br {display: none;}
-.hero .heroText{font-size: 30px; letter-spacing: 2px; line-height: 140%; color: #fff; margin: 2.6rem 0 6rem;}
+.hero .heroText{font-size: 30px; letter-spacing: 2px; line-height: 140%; color: #fff; margin: 2.5rem 0 4.5rem;}  /* 마진짧게 함 */
 .hero .heroBtn{color: #fff; font-size: 20px; width: 170px; height: 57px; border: 1px solid rgba(255, 255, 255, 0.9); background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(4px); border-radius: 50px; display: flex; justify-content:space-between; padding-left: 24px; align-items: center; }
 .hero .heroBtn a{display: inline-block; width: 48px; height: 48px; background: #8CCD00; border-radius: 50%; margin-right: 7px; display: flex; justify-content: center; align-items: center;}
 .hero .heroBtn a:hover{background: #99e001;}
@@ -455,7 +455,7 @@ form.login .loginOption .findInfo{justify-content: center;}
 
 
 .sectionBox {}
-.sectionBox .repeatTop .location {margin: 40px 0 13px; font-size: 14px; margin-left: clamp(2rem,2.5vw,5rem);}
+.sectionBox .repeatTop .location {margin: 40px 0 13px; font-size: 14px; margin-left: clamp(2rem,2.5vw,5rem); display: flex; align-items: center; gap: 4px;}
 .sectionBox .repeatTop .location figure{width: 1.6rem; height: 1.6rem; display: inline-block;}
 .sectionBox .repeatTop .location figure img{object-fit: cover; width: 100%; height: auto;}
 .sectionBox .repeatTop .location a{}
