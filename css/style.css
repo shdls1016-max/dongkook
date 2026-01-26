@@ -62,9 +62,9 @@ nav .loginbox.mo{display: none;}
 /* 높이를 vh기준으로 해서 그런지 브라우저창 세로길이를 줄이면 영상영역이 짧아지는 것 같음 (글자가 넘침) */
 .hero video{object-fit: cover; width: 100%; height: 100%;} 
 .heroTset{position: absolute; z-index: 10; top: 7.8vw; left: 7vw;  z-index: 1;}
-.hero strong{font-size: 8rem; font-weight: bold; color: var(--mainColor1); letter-spacing:-5px; font-family: "Montserrat", sans-serif;}  
+.hero strong{font-size: 8rem; font-weight: bold; color: var(--mainColor1);  font-family: "Montserrat", sans-serif;}  
 .hero strong br {display: none;}
-.hero .heroText{font-size: 30px; letter-spacing: 2px; line-height: 140%; color: #fff; margin: 2.5rem 0 4.5rem;}  /* 마진짧게 함 */
+.hero .heroText{font-size: 30px;  line-height: 140%; color: #fff; margin: 2.5rem 0 4.5rem;}  /* 마진짧게 함 */
 .hero .heroBtn{color: #fff; font-size: 20px; width: 170px; height: 57px; border: 1px solid rgba(255, 255, 255, 0.9); background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(4px); border-radius: 50px; display: flex; justify-content:space-between; padding-left: 24px; align-items: center; }
 .hero .heroBtn a{display: inline-block; width: 48px; height: 48px; background: #8CCD00; border-radius: 50%; margin-right: 7px; display: flex; justify-content: center; align-items: center;}
 .hero .heroBtn a:hover{background: #99e001;}
@@ -84,12 +84,12 @@ nav .loginbox.mo{display: none;}
 .s1 .content .bimg figure img{width: 100%; border: 1px solid #EBEBEB; border-radius: 10px; box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.05);}
 .s1 .content .bimg .sort {position: absolute; bottom: 3rem; right: 3rem; padding: 24px 25px; background:rgba(111, 162, 0, 0.9); border-radius: 10px; color: #ECFBCC; backdrop-filter:blur(4px); max-width: 427px; width: 50%;} 
 .s1 .content .bimg .sort .sortTop {display: flex; justify-content: space-between; margin-bottom: 20px; align-items: start;}
-.s1 .content .bimg .sort .sortTop h4 {font-size: 2rem; font-weight: 500; letter-spacing: -2px; line-height: 140%; color: #fff;}
-.s1 .content .bimg .sort .sortTop a {color: #ECFBCC; font-size: 1.4rem; line-height: 140%; letter-spacing: -2px; transition: .3s;}
+.s1 .content .bimg .sort .sortTop h4 {font-size: 2rem; font-weight: 500;  line-height: 140%; color: #fff;}
+.s1 .content .bimg .sort .sortTop a {color: #ECFBCC; font-size: 1.4rem; line-height: 140%; transition: .3s;}
 .s1 .content .bimg .sort .sortTop a:hover{font-size: 1.45rem; color: #f5ffe0; display: inline-block; /* border-bottom:1px solid #f5ffe0; */}
 /* hover 효과 언더라인이랑 폰트사이즈 중 어떤 걸로 할지 물어보기 */
 
-.s1 .content .bimg .sort .sortBottom {display: flex; /* gap: 8.4rem; */ justify-content: space-between; font-size: 1.8rem; line-height: 140%; letter-spacing: -1px; font-weight: 300;}
+.s1 .content .bimg .sort .sortBottom {display: flex; /* gap: 8.4rem; */ justify-content: space-between; font-size: 1.8rem; line-height: 140%;  font-weight: 300; letter-spacing: -1px;}
 .s1 .content .bimg .sort .sortBottom ul {}
 .s1 .content .bimg .sort .sortBottom ul li {margin-bottom: 7px;}
 .s1 .content .bimg .sort .sortBottom ul li:last-child {margin-bottom: 0;}
@@ -104,7 +104,7 @@ nav .loginbox.mo{display: none;}
 
 
 
-.s1 .content .simg li figure a{display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 300; letter-spacing: -2px; position: absolute; bottom: 5%; left: 10%; width: 80%; gap:8px; padding: 9px 0; background: rgba(255, 253, 253, 0.6); border-radius: 10px; backdrop-filter: blur(4px); border: 1px solid rgba(244,244,244, 0.6);}
+.s1 .content .simg li figure a{display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 300;  position: absolute; bottom: 5%; left: 10%; width: 80%; gap:8px; padding: 9px 0; background: rgba(255, 253, 253, 0.6); border-radius: 10px; backdrop-filter: blur(4px); border: 1px solid rgba(244,244,244, 0.6); }
 .s1 .content .simg li figure a:hover{background: rgba(255, 253, 253, 0.8); color: #111;}
 
 .s1 .content .simg li figure a span{display: flex; align-items: center;}
@@ -126,9 +126,9 @@ background:rgba(111, 162, 0, 0.9); border-radius: 10px; color: #ECFBCC; backdrop
 .s2 figure > img{width: 100%; object-fit: cover; display: block; height: auto;}
 .s2 figure .position{position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); display: flex; gap:3.54vw;}
 .s2 figure .s2Tset{color: #fff; display: flex; flex-direction: column; align-items: end; white-space: nowrap;}
-.s2 figure .s2Tset h3{font-size:4rem; line-height: 140%; letter-spacing: -2px; margin-bottom: 1.6rem; font-weight: 500;} 
+.s2 figure .s2Tset h3{font-size:4rem; line-height: 140%; margin-bottom: 1.6rem; font-weight: 500;} 
 /* section2 타이틀 크기 */
-.s2 figure .s2Tset a{font-size: 1.6rem; line-height: 140%; letter-spacing: -1px; display: inline-block; display: flex; color: #fff; align-items: center;}
+.s2 figure .s2Tset a{font-size: 1.6rem; line-height: 140%; display: inline-block; display: flex; color: #fff; align-items: center;}
 
 /* 화살표 촉이 축이랑 가운데가 아닌 것 같음 */
 .s2 figure .s2Tset a .arrow{width: 1.9rem; height: 1.9rem; margin-left: 2px; position: relative;}
@@ -156,8 +156,8 @@ background:rgba(111, 162, 0, 0.9); border-radius: 10px; color: #ECFBCC; backdrop
 .s3 ul li:hover > a > img {transform: scale(1.1); transition: .3s;} 
 .s3 ul li .textSet {}
 .s3 ul li .textSet .title {margin-top: 1.5rem; font-size: 2rem; font-weight: 600; display: inline-block;}
-.s3 ul li .textSet .desc {font-size: 1.8rem; letter-spacing: -1px; margin: 5px 0 7px;}
-.s3 ul li .textSet .date {font-size: 1.6rem; letter-spacing: -1px; /* display: inline-block; */}
+.s3 ul li .textSet .desc {font-size: 1.8rem; margin: 5px 0 7px;}
+.s3 ul li .textSet .date {font-size: 1.6rem; /* display: inline-block; */}
 
 
 footer{height:clamp(19.7rem,10vw,17.9rem); width: 100%; background: #102B4A; display: flex; align-items: center; justify-content: center;}
@@ -317,7 +317,7 @@ ul.productImg li:hover .productText{ top: 75%; left: 50%; transform: translate(-
 
     .s3 ul > li > .textSet{margin-left: 0px;}
     .s3 ul > li > .textSet > .date{margin-top: 0.6rem;}
-    .s3 ul > li > .textSet > .title{font-size: 1.7rem; white-space: nowrap;}
+    .s3 ul > li > .textSet > .title{font-size: 1.7rem; white-space: nowrap; letter-spacing: -1px;}
     .s3 ul > li > .textSet > .date{font-size: 1.5rem;}
    
     footer .content h3{display: none;}
@@ -444,6 +444,7 @@ ul.productImg li:hover .productText{ top: 55%; left: 50%; transform: translate(-
 /* ----------login--------- */
 form.login .loginOption{font-size: 15px; flex-direction: column; gap: 30px; flex-wrap: wrap; margin-bottom: 7vw;}
 form.login .loginOption .findInfo{justify-content: center;}
+.sub_content form .searchBox input{font-size: 15px; /* letter-spacing: -1px; */}
 
 }
 
@@ -467,11 +468,11 @@ form.login .loginOption .findInfo{justify-content: center;}
 .sub_content{display: flex; flex-direction: column; align-items: center;}
 form{margin: 65px 90px; text-align: center;}
 form .searchBox{display: inline-block; position: relative;}
-form .searchBox input{width: 43.75vw; padding: 29px 0 17px 10px; font-size: 25px; letter-spacing: -1px; border: 0; border-bottom: 1px solid #102b4a; color: rgba(17, 17, 17, 0.4);}
+form .searchBox input{width: 43.75vw; padding: 29px 0 17px 10px; font-size: 25px; /* letter-spacing: -1px; */ border: 0; border-bottom: 1px solid #102b4a; color: rgba(17, 17, 17, 0.4);}
 form .searchBox button{background: transparent; border: 0; width: 43px; height: auto; position: absolute; bottom: 17px; right: 17px;}
 form .searchBox button img{width: 100%; height: auto; object-fit: cover;}
 
-ul.productType.pc{display: flex; gap: 15px; font-size:2.2rem; letter-spacing: -1px;}
+ul.productType.pc{display: flex; gap: 15px; font-size:2.2rem; /* letter-spacing: -1px; */}
 ul.productType.pc li{ border-radius:30px; border: 1px solid #4e6886; box-sizing: border-box; }
 ul.productType.pc li.on{background:rgba(16, 43, 74, 1)}
 ul.productType.pc li.on a{color: #fff;}
@@ -488,7 +489,7 @@ ul.productType.pc li:hover a{color: #fff;}
 .productImg > li > a{width: 100%; height:100%; overflow: hidden; object-fit: cover;}
 .productImg > li > a > img{width: 100%; height:100%; object-fit: cover; border: 1px solid #D9D8D8; background: #fff;}
 .productImg li .productText{display: flex; flex-direction: column; position: absolute; top: 0; left: 0; padding: 29px 0 16px; background: rgba(255, 255, 255, 0.7); border-radius: 5px; width: calc(100% - 1.35vw); top: 85%; left: 50%; transform: translate(-50%, -50%);  transition: .3s; opacity: 0;}  
-.productImg li .productText span:first-child{font-size: 2.5rem; letter-spacing: -1px; font-weight: 600; margin-bottom: 5px;}
+.productImg li .productText span:first-child{font-size: 2.5rem; /* letter-spacing: -1px; */ font-weight: 600; margin-bottom: 5px;}
 .productImg li .productText:last-child{font-size: 20px; font-weight: lighter; color: #4d4d4f;}
 
 .productImg li:hover .dimmed {width: 100%; height: 100%; background: rgba(0, 0, 0, 0.3); position: absolute; top: 0; left: 0; backdrop-filter: blur(4px);}
@@ -516,11 +517,11 @@ form.login{margin-bottom: 0;}
 form .searchBox.login{display: flex; flex-direction: column;}
 form .searchBox button.eye{background: transparent; border: 0; width: 22px; height: auto; position: absolute; bottom: 18px; right: 20px; cursor: pointer;}
 
-form .searchBox input{font-size: 16px; letter-spacing: -2px;}
+form .searchBox input{font-size: 16px; /* letter-spacing: -1px; */}
 .searchBox input.id{width: 53.6rem;}
 .searchBox input.password{width: 53.6rem;}
 .searchBox input:focus{outline: 0px;}
-.loginOption {display: flex; margin: 0.88vw 0 6.56vw; font-size: 1.6rem; letter-spacing: -2px; justify-content: space-between;}
+.loginOption {display: flex; margin: 0.88vw 0 6.56vw; font-size: 1.6rem;  letter-spacing: -1px; justify-content: space-between;}
     .ckset{display: flex; gap: 8px; align-items: center;}
 .loginOption > input{border: 1px solid red; background: red;}
 .loginOption .findInfo{display: flex; gap: 1rem; align-items: center;}
