@@ -89,7 +89,7 @@ nav .loginbox.mo{display: none;}
 .s1 .content .bimg .sort .sortTop a:hover{font-size: 1.45rem; color: #f5ffe0; display: inline-block; /* border-bottom:1px solid #f5ffe0; */}
 /* hover 효과 언더라인이랑 폰트사이즈 중 어떤 걸로 할지 물어보기 */
 
-.s1 .content .bimg .sort .sortBottom {display: flex; /* gap: 8.4rem; */ justify-content: space-between; font-size: 1.8rem; line-height: 140%;  font-weight: 300; letter-spacing: -1px;}
+.s1 .content .bimg .sort .sortBottom {display: flex; /* gap: 8.4rem; */ justify-content: space-between; font-size: 1.6rem; line-height: 140%;  font-weight: 300; letter-spacing: normal;}
 .s1 .content .bimg .sort .sortBottom ul {}
 .s1 .content .bimg .sort .sortBottom ul li {margin-bottom: 7px;}
 .s1 .content .bimg .sort .sortBottom ul li:last-child {margin-bottom: 0;}
