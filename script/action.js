@@ -217,3 +217,73 @@ $('.searchBox.login > button').click(function(){
         $(this).find('img').attr('src','images/sub/eye-off.png')
     }
 })
+
+//사용가능한 서브페이지 표시용도
+$(function(){
+    const $gnb = $('.gnb')
+    const $canuse = $('.canuse')
+
+    if($canuse.length === 0) return;
+
+    const $canuseParent = $canuse.closest('.gnb>li');
+
+    function blinkCanUse(){
+        $canuse.removeClass('blink');
+        $canuse[0].offsetWidth;
+
+        $canuse.addClass('blink');
+    }
+
+    //pc
+    $gnb.on('mouseenter',function(){
+        if(!$('.hamburger.mo').is(':visible')){
+            blinkCanUse();
+        }
+    });
+
+    //mo
+    $canuseParent.on('mouseenter',function(){
+        if($('.hamburger.mo').is(':visible')){
+            blinkCanUse();
+        }
+    });
+});
+
+$(function () {
+  const $loginLink = $('.loginbox a[href*="login"]');
+
+  // 로그인 링크가 없는 페이지는 자동 종료
+  if ($loginLink.length === 0) return;
+
+  setTimeout(function () {
+    // 기존 애니메이션 초기화
+    $loginLink.removeClass('blink');
+    $loginLink[0].offsetWidth; // reflow
+
+    // 확실하게 보이도록 직접 애니메이션 적용
+    $loginLink.css({
+      animation: 'blink 0.8s ease-in-out 3'
+    });
+  }, 100);
+});
+
+$(function () {
+  const $hamburger = $('.hamburger.mo');
+  const $loginLink = $('nav .loginbox.mo a[href*="login"]');
+
+  if ($hamburger.length === 0 || $loginLink.length === 0) return;
+
+  function blinkLogin() {
+    $loginLink.css('animation', 'none');
+    $loginLink[0].offsetWidth; // reflow
+    $loginLink.css('animation', 'blink 0.8s ease-in-out 3');
+  }
+
+  $hamburger.on('click', function () {
+    setTimeout(function () {
+      if ($hamburger.hasClass('on')) {
+        blinkLogin();
+      }
+    }, 300);
+  });
+});
