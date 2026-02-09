@@ -18,10 +18,15 @@ body{font-family: "Noto Sans", sans-serif;}
   50%{opacity: 0;}
   100%{opacity: 1;}
 }
-.canuse.blink{animation: blink 0.8s ease-in-out 2;}
+/* .canuse.blink{animation: blink 0.8s ease-in-out 2;} */
 
-
-
+.active {position: relative;}
+.active:before {content: ""; position: absolute; width: 5px; height: 5px; border-radius: 50%; background:var(--mainColor1); right: -5px;  animation: 1s pulse infinite;}
+.active:after {content: ""; position: absolute; width: 5px; height: 5px; border-radius: 50%; background: coral; right: -5px; }
+@keyframes pulse {
+  0% {transform: scale(1);}
+  100% {transform: scale(5); opacity: 0;}
+}
 
 .container{max-width: 1605px; margin-left: auto; margin-right: auto; }
 section{margin-bottom: 160px;}
@@ -62,7 +67,8 @@ nav .loginbox.mo{display: none;}
 .gnb > li:hover::after{content: ''; position: absolute; bottom: 0; right: 50%; background: #8ccd00; width: 50%; height: 2px; }
 
 
-
+.gnb li a.active:before {right: auto; left: 80px;}
+.gnb li a.active:after {right: auto; left: 80px;}
 
 
 
