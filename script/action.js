@@ -218,7 +218,7 @@ $('.searchBox.login > button').click(function(){
     }
 })
 
-//사용가능한 서브페이지 표시용도
+/* //사용가능한 서브페이지 표시용도
 $(function(){
     const $gnb = $('.gnb')
     const $canuse = $('.canuse')
@@ -286,4 +286,4 @@ $(function () {
       }
     }, 300);
   });
-});
+}); */
